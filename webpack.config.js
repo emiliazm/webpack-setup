@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
  module.exports = {
+   mode: 'production',
    entry: {
      index: './src/index.js',
      print: './src/print.js',
@@ -31,4 +32,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
   optimization: {
     runtimeChunk: 'single',
   },
+  performance: {
+    hints: false,
+  }
  };
